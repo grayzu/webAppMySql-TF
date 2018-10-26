@@ -1,8 +1,8 @@
 resource "azurerm_app_service_plan" "webAppFrontend" {
   name                = "${var.siteName}serviceplan"
-  resource_group_name = "${var.rg}"
-  location            = "${var.loc}"
-  tags                = "${var.tags}"
+  resource_group_name = "${azurerm_resource_group.webAppMySqlRg.name}"
+  location            = "${azurerm_resource_group.webAppMySqlRg.location}"
+  tags                = "${azurerm_resource_group.webAppMySqlRg.tags}"
 
   sku {
     tier = "${var.servicePlanTier}"
@@ -12,9 +12,9 @@ resource "azurerm_app_service_plan" "webAppFrontend" {
 
 resource "azurerm_app_service" "webAppFrontend" {
   name                = "${var.siteName}"
-  location            = "${var.loc}"
-  resource_group_name = "${var.rg}"
-  tags                = "${var.tags}"
+  location            = "${azurerm_resource_group.webAppMySqlRg.location}"
+  resource_group_name = "${azurerm_resource_group.webAppMySqlRg.name}"
+  tags                = "${azurerm_resource_group.webAppMySqlRg.tags}"
 
   app_service_plan_id = "${azurerm_app_service_plan.webAppFrontend.id}"
   connection_string {

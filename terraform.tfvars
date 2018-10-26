@@ -1,4 +1,4 @@
-rg      = "mcgsample001a"
+rg      = "mcg623webAppMysql"
 loc     = "eastus2"
 tags    = {
     type = "sample"
@@ -6,7 +6,7 @@ tags    = {
 } 
 
 administratorLogin = "markg"
-siteName = "mysqlsample01a"
+siteName = "mcgecd69mysql"
 
 servicePlanTier = "Standard"
 servicePlanSize = "S1"
