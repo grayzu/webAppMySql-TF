@@ -1,5 +1,5 @@
 output "webAppUrl" {
-  value = "${azurerm_app_service.webAppFrontend.fqdn}"
+  value = "${azurerm_app_service.webAppFrontend.default_site_hostname}"
 }
 
 output "databaseName" {

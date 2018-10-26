@@ -22,7 +22,6 @@ resource "azurerm_mysql_server" "webAppBackend" {
 resource "azurerm_mysql_database" "webAppBackend" {
   name                = "${var.siteName}database"
   resource_group_name = "${var.rg}"
-  tags                = "${var.tags}"
 
   server_name         = "${azurerm_mysql_server.webAppBackend.name}"
   charset             = "utf8"

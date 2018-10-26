@@ -1,11 +1,12 @@
-rg      = "mcg_sample0010"
+rg      = "mcgsample001a"
 loc     = "eastus2"
 tags    = {
     type = "sample"
-    services = ["MySql","WebApp","Azure database"]
-}
+    services = "MySql, WebApp, Azure database"
+} 
 
-adminstratorLogin = "markg"
+administratorLogin = "markg"
+siteName = "mysqlsample01a"
 
 servicePlanTier = "Standard"
 servicePlanSize = "S1"

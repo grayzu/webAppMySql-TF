@@ -16,7 +16,7 @@ resource "azurerm_app_service" "webAppFrontend" {
   resource_group_name = "${var.rg}"
   tags                = "${var.tags}"
 
-  app_service_plan_id = "${azurerm_app_service.webAppFrontend.id}"
+  app_service_plan_id = "${azurerm_app_service_plan.webAppFrontend.id}"
   connection_string {
     name  = "DefaultConnect"
     type  = "MySql"
